@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{border:1px solid black}
+        th{border:1px solid black; height:100px; background-color: lightblue;}
+
+    </style>
+</head>
+
+<body>
+    <table><!--문제1번-->
+        <tr>
+            <th width="50">201호</th>
+            <th width="50">202호</th>
+            <th width="50">203호</th>
+        </tr>
+        <tr>
+            <th width="50" colspan="3">주인집</th>
+            <!--th width="50"></th>
+            <th width="50"></th-->
+        </tr>
+    </table>
+<hr>
+    <table><!--문제2번-->
+        <tr>
+            <th width="50" rowspan="2">201호</th>
+            <th width="50">202호</th>
+            <th width="50">203호</th>
+        </tr>
+        <tr>
+            <!--th width="50">주인집</th-->
+            <th width="50">주인집2</th>
+            <th width="50">주인집3</th>
+        </tr>
+    </table>
+    <hr>
+
+    <table><!--문제3번-->
+        <tr>
+            <th width="50" rowspan="2">201호</th>
+            <th width="50">202호</th>
+            <th width="50">203호</th>
+        </tr>
+        <tr>
+            <!--th width="50">주인집</th-->
+            <th width="50" colspan="2" >주인집2</th>
+            <!--th width="50">주인집3</th-->
+        </tr>
+    </table>
+</body>
+</html>

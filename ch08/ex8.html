@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 문서 작성기</title>
+    <script>
+        var win = null; //default값은 null
+        function showHTML(){
+            if(win==null || win.closed){ //클릭시 한번만 창이 띄워질 수 있도록
+                win = window.open("","outWin","width=250,height=150"); //window.open()새로운 창 띄우기
+            }
+            ta = document.getElementById("srcText");
+            win.document.open();
+            win.document.write(ta.value);
+            win.document.closed();
+       }
+    </script>
+</head>
+<body>
+    <h3>HTML 문서 작성기 만들기</h3><hr>
+    <textarea id="srcText" cols="40" rows="10"></textarea><br>
+    <button onclick="showHTML()">HTML문서 작성</button>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(){
+            alert("보이나요?");
+            f = document.frm; //document는 html의 body같은 영역 > frm을 f로 치환
+            if(f.id.value==""){ //value가 빈값이면 '아이디를 입력하세요' 경고창
+                alert("아이디를 입력하세요.");
+                return;
+            }
+        } 
+    </script>    
+    
+</head>
+<body>
+    <h3>로그인폼</h3>
+    <form name="frm" method="" action="">
+        <!--form에는 name, method, action 무조건 포함
+        form : 입력받은 값을 server에게 요청, 요청한 페이지를 받음 
+        name : javascript와 연동하기 위해 구분하기 위한 속성
+        method : 1.get - default, 검색, 글읽기, url상 노출 // 2.post - 글쓰기, 수정, url상 노출x
+        action : 사용자가 요청할 페이지 주소
+
+        form
+        1. server로 테스트 해야함 (Tomcat 이용)
+        2. form 기능 직접 확인하기위해 server 사용
+        -->
+
+        ID : <input type="text" size="15" name="id" value=""><br> 
+        <!--text가 기본 default. 생략가능/ value값을 입력하면 기본적으로 화면에 표시-->
+
+        PWD : <input type="password" size="15" name="pwd"><br>
+
+        <input type="submit" value="로그인" onclick="check()"><br>
+        <!--onclick했을때 check() 함수 작동-->
+    </form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>원하는 값 추출하기</title>
+</head>
+<body>
+    <h3>원하는 값 추출하기</h3><hr>
+    <script>
+        var a = "https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=101&oid=001&aid=0011464231";
+        // document.writeln(a);
+        
+        var a1 = a.slice(a.indexOf('?')+1);
+
+        var a2 = a1.split('&');
+         for(i=0; i<a2.length; i++){
+             var a3=a2[i].split('=');
+             document.writeln(a3[0]+"<br>");
+         }
+
+         for(i=0; i<a2.length; i++){
+             var a3=a2[i].split('=');
+             document.writeln(a3[1]+"<br>");
+         }
+
+
+
+
+    </script>
+</body>
+</html>

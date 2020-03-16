@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //url을 매개변수로 갖는 function을 만들겠다.
+        function load(url){
+            //window = new Window(); //window라는 객체가 미리 생성
+            window.open(url,"myWindow","left=100,top=100,width=400,height=300") 
+            //url오픈, "myWindow"창의 이름
+        }
+    </script>
+</head>
+<body>
+    <h3>window.open()으로 새창열기</h3><hr>
+    <a href="javascript:load('http://JSPstudy.co.kr')">JSPstudy</a>
+    <a href="javascript:load('http://kr.noxinfluencer.com')">유튜브 수입 계산</a>
+    <a href="javascript:load('http://JSPstudy.co.kr')">JSPstudy</a>
+    <!--javascript의 load에 매개변수로 넣어야 호출 가능-->
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+
+<script>
+    function over(obj){
+        obj.src="media/banana.png";
+    }
+    function out(obj){
+        obj.src="media/apple.png";
+    }
+</script>
+
+<script src="ex1.js"></script><!--외부 스크립트 삽입-->
+
+<body>
+    <h3>자바스크립트 동작 위치</h3>
+    <!--this : 내 자신을 가르키는 예약어-->
+    <img src="https://i.imgur.com/fJn7sF9.png" 
+    onmouseover="this.src='https://i.imgur.com/qs2SCt4.png'" 
+    onmouseout="this.src='https://i.imgur.com/fJn7sF9.png'" alt="사과"><hr>
+
+    <img src="https://i.imgur.com/fJn7sF9.png"
+    onmouseover="over(this)"
+    onmouseout="out(this)"><hr>
+
+    <img src="https://i.imgur.com/fJn7sF9.png"
+    onmouseover="over2(this)"
+    onmouseout="out2(this)">
+
+    <!--객체 > 클래스 > 변수-객체의 속성 / 메소드-객체 반복적인 동작(기능) -->
+</body>
+</html>
+

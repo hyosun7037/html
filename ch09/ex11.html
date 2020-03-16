@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkFiled(obj){
+            if(obj.value=="" && obj.placeholder ==""){
+                alert("enter name");
+                obj.focus();
+                obj.placeholder = " "; //빈칸이 추가되면 if문이 성립되지 않으므로 alert가 실행이 X
+            }
+        }
+    </script>
+</head>
+<body onload="document.getElementById('name').focus()">
+    <h3>onfocus와 onblur</h3><hr>
+    <form>
+        이름 : <input id="name" onblur="checkFiled(this)" onfocus="this.placeholder=''"><p></p>
+        학번 : <input>
+        <!--onblur는 포커스를 잃었을 때 실행-->
+    </form>
+</body>
+</html>

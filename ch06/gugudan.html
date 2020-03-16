@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 만들기</title>
+    <style>
+        body{
+            background-color: seashell;
+        }
+        h3{
+            text-align: center;
+        }
+        table{
+            margin:0 auto;
+            border:1px solid #fff;
+            border-collapse: collapse;
+        }
+        td{
+            border:1px solid #fff;
+            width:100px;
+            height: 40px;
+            text-align: center;
+            background-color:beige;
+        }
+        
+    </style>
+</head>
+<body>
+    <h3>구구단만들기</h3><hr>
+    
+    <script>
+        // for(i=1; i<10; i++){
+        //     for(j=1; j<=9; j++){          
+        //         // document.writeln(i +" X " + j + " = " + i*j + "<br> " );
+        //         if(i==2 && j<=9)
+        //         document.writeln("<td>" + i +" X " + j + " = " + i*j + "</td>" ) 
+        //     }document.writeln("<br>")
+        // }
+
+        for(j=1; j<10; j++){
+            document.writeln("<table><tr>");
+                for(i=2; i<10; i++){
+                    document.writeln("<td>" + i +" X " + j + " = " + i*j + "</td>");
+                }
+        }document.writeln("</tr></table>")
+    </script>
+
+</body>
+</html>

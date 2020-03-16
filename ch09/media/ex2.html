@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onload 이벤트 리스너</title>
+    <script>
+        var p; //전역변수 : 여러개의 function 공유의 목적
+        function init(){ //id명은 tag과 다르게 설정하는 것이 좋음
+            p = document.getElementById("p");
+
+            //첫번째 등록방법 / 제일 많이 사용!!
+            p.onmouseover = over; //over function 호출 등록
+            p.onmouseout = out; //out function 호출 등록
+
+            //두번째 등록방법
+            p.addEventListener("mouseover",over); // 따로 이벤트 리스너 등록 가능
+            p.addEventListener("mouseout",out);
+
+            //세번째 등록방법 : 익명함수로 등록 / 그 자리에서 생성, 굳이 이름이 필요없음
+            //한번만 사용할 거면 바로 코드 삽입해도 상관없음!
+            p.addEventListener("mouseover",function(){
+                p.style.backgroundColor = "orchid";
+            }); 
+            p.addEventListener("mouseout",function(){
+                p.style.backgroundColor = "white";
+            }); 
+        }
+        function over(){
+            p.style.backgroundColor = "orchid";
+        }
+
+        function out(){
+            p.style.backgroundColor = "white";
+        }
+    </script>
+</head>
+<body onload="init()">
+    <h3>DOM 객체의 이벤트 리스너 프로퍼티에 함수 등록</h3><hr>
+    <p id="p">마우스 올리면 orchid 색으로 변경</p>
+</body>
+</html>
